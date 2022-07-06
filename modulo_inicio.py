@@ -1,14 +1,15 @@
 from tkinter import *
-
+from tkinter import messagebox #para ventanas emergentes
 #-------------------------Funciones---------------
 
 #---------------------fn salir------------
 
-def fn_salir ():
-    ventana_inicio.destroy()
-
-
-
+def fn_salir_aplicacion():
+    salir=messagebox.askokcancel("Biblioteca","Desea salir de la aplicación?")
+    #ask ok cancel es para carteles con opciones, se debe definir que accion toma el boton aceptar
+    # aceptar devuelve True o False lo cual el resultado se guarda en una variable
+    if salir == True:
+        ventana_inicio.destroy() 
 
 #---------------------------raiz------------------
 ventana_inicio = Tk()
@@ -44,10 +45,8 @@ boton_ingresar.grid(row=10,column=0,padx=10,pady=20,sticky=E)
 boton_registrarse= Button(ventana_inicio,text="Registrarse")
 boton_registrarse.grid(row=10,column=1,padx=10,pady=20)
 
-boton_salir= Button(ventana_inicio,text="Salir",command=fn_salir)
+boton_salir= Button(ventana_inicio,text="Salir",command=fn_salir_aplicacion)
 boton_salir.grid(row=10,column=2,padx=10,pady=20,sticky=W)
-
-
 
 
 
