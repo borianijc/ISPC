@@ -23,19 +23,13 @@ def crear_base_usuario():
 #------------------Hasta aca fue editado 06/07/2022
 
 
-
-
-
-
-
 def limpiar_campos():
     my_ID.set("")
     my_name.set("")
     my_surname.set("")
     my_usuarname.set("")
     my_password.set("")
-    # lo siguiente es para borrar datos de texto desde posición 1 hast el fin
-    text_comentarios.delete(1.0,END)
+
 
 # ------------------------------------funcion para cargar los datos de nuevo usuario a la BBDD---------------
 def nuevo_usuario():

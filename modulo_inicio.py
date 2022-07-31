@@ -1,5 +1,8 @@
 from tkinter import *
 from tkinter import messagebox #para ventanas emergentes
+
+
+
 #-------------------------Funciones---------------
 
 #---------------------fn salir------------
@@ -21,9 +24,9 @@ ventana_inicio.iconbitmap("library.ico")
 ventana_inicio.config(height=1500,width=1500)
 
 #-----------------------------label fondo---------------------
-fondo_inicio=PhotoImage(file="library_1767.png"),#height=1200,width=1200)
+fondo_inicio=PhotoImage(file="library_1767.png"),#height=1200,width=1200"
 label_inicio= Label(ventana_inicio, image=fondo_inicio)
-label_inicio.grid(sticky=N and W,columnspan=2)
+label_inicio.grid(columnspan=3)
 
 #----------------------------ingreso de usuarios-----------------
 label_usuario= Label(ventana_inicio,text="usuario: ")
@@ -33,20 +36,21 @@ entry_usuario= Entry (ventana_inicio)
 entry_usuario.grid(row=8,column=1,sticky=W)
 
 label_password= Label(ventana_inicio,text="contraseña: ")
-label_password.grid(row=9,column=0,sticky=E)
+label_password.grid(row=9,column=0,sticky=E,pady=10)
 
 entry_password= Entry (ventana_inicio)
 entry_password.grid(row=9,column=1,sticky=W)
+entry_password.config(show="*")
 
 #---------------Botones ingresar/registrarse/salir-----------
-boton_ingresar= Button(ventana_inicio,text="Ingresar")
-boton_ingresar.grid(row=10,column=0,padx=10,pady=20,sticky=E)
+boton_ingresar= Button(ventana_inicio,text="Ingresar",height=1,width=10)
+boton_ingresar.grid(row=10,column=0,padx=10,pady=10)
 
-boton_registrarse= Button(ventana_inicio,text="Registrarse")
-boton_registrarse.grid(row=10,column=1,padx=10,pady=20)
+boton_registrarse= Button(ventana_inicio,text="Registrarse",height=1,width=10)
+boton_registrarse.grid(row=10,column=1,padx=10,pady=10)
 
-boton_salir= Button(ventana_inicio,text="Salir",command=fn_salir_aplicacion)
-boton_salir.grid(row=10,column=2,padx=10,pady=20,sticky=W)
+boton_salir= Button(ventana_inicio,text="Salir",height=1,width=10, command=fn_salir_aplicacion)
+boton_salir.grid(row=10,column=2,padx=10,pady=10)
 
 
 
