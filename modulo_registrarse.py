@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox #para ventanas emergentes
-
+import class_fns 
 
 
 #-------------------------Funciones---------------
@@ -85,8 +85,11 @@ boton_ingresar.grid(row=20,column=0,padx=10,pady=10)
 boton_registrarse= Button(ventana_registro,text="Registrarse",height=1,width=10)
 boton_registrarse.grid(row=20,column=1,padx=10,pady=10)
 
+boton_registrarse= Button(ventana_registro,text="Borrar Datos",height=1,width=10,command= class_fns.funciones.limpiar_campos_registro)
+boton_registrarse.grid(row=20,column=2,padx=10,pady=10)
+
 boton_salir= Button(ventana_registro,text="Salir",height=1,width=10, command=fn_salir_aplicacion)
-boton_salir.grid(row=20,column=2,padx=10,pady=10)
+boton_salir.grid(row=20,column=3,padx=10,pady=10)
 
 
 

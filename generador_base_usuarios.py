@@ -1,3 +1,5 @@
+import sqlite3
+from tkinter import messagebox 
 
 def crear_base_usuario():
     
@@ -11,7 +13,11 @@ def crear_base_usuario():
         cursor_base_usuarios.execute('''CREATE TABLE USUARIOS_BIBLIOTECA (
             ID INTEGER PRIMARY KEY AUTOINCREMENT, 
             NOMBRES VARCHAR (20), 
-            APELLIDO VARCHAR (20),  
+            APELLIDO VARCHAR (20),
+            DIRECCION VARCHAR (20),
+            LOCALIDAD VARCHAR (20),
+            TELEFONO INTEGER (10),
+            EMAIL VARCHAR (30),  
             USUARIO VARCHAR (10) UNIQUE,
             CONTRASEÑA VARCHAR (10),
             TIPO_USUARIO (15)
@@ -23,12 +29,12 @@ def crear_base_usuario():
 #------------------Hasta aca fue editado 06/07/2022
 
 
-def limpiar_campos():
-    my_ID.set("")
-    my_name.set("")
-    my_surname.set("")
-    my_usuarname.set("")
-    my_password.set("")
+#def limpiar_campos():
+#    my_ID.set("")
+#    my_name.set("")
+#    my_surname.set("")
+#    my_usuarname.set("")
+#    my_password.set("")
 
 
 # ------------------------------------funcion para cargar los datos de nuevo usuario a la BBDD---------------
