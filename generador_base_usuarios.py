@@ -8,7 +8,7 @@ def crear_base_usuario():
 # cursor para conexion
 
     cursor_base_usuarios=conexion.cursor()
-
+#------------------ejecuta el create para crear la tabla USUARIOS_BIBLIOTECA-----------
     try:
         cursor_base_usuarios.execute('''CREATE TABLE USUARIOS_BIBLIOTECA (
             ID INTEGER PRIMARY KEY AUTOINCREMENT, 

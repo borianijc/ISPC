@@ -28,7 +28,8 @@ ventana_registro.config(height=1500,width=1500)
 #label_inicio= Label(ventana_inicio, image=fondo_inicio)
 #label_inicio.grid(columnspan=3)
 
-#----------------------------ingreso de usuarios-----------------
+#----------------------------Registro de usuarios-----------------
+
 label_nombre= Label(ventana_registro,text="Nombre:")
 label_nombre.grid(row=1,column=0,sticky=E,pady=10)
 
@@ -78,18 +79,20 @@ entry_password= Entry (ventana_registro)
 entry_password.grid(row=18,column=1,sticky=W)
 entry_password.config(show="*")
 
-#---------------Botones ingresar/registrarse/salir-----------
-boton_ingresar= Button(ventana_registro,text="Ingresar",height=1,width=10)
-boton_ingresar.grid(row=20,column=0,padx=10,pady=10)
+label_confirm_password= Label(ventana_registro,text="Confirmar contraseña:")
+label_confirm_password.grid(row=19,column=0,sticky=E,pady=10)
+
+entry_confirm_password= Entry (ventana_registro)
+entry_confirm_password.grid(row=19,column=1,sticky=W)
+entry_confirm_password.config(show="*")
+
+#---------------Botones registrarse/salir-----------
 
 boton_registrarse= Button(ventana_registro,text="Registrarse",height=1,width=10)
-boton_registrarse.grid(row=20,column=1,padx=10,pady=10)
-
-boton_registrarse= Button(ventana_registro,text="Borrar Datos",height=1,width=10,command= class_fns.funciones.limpiar_campos_registro)
-boton_registrarse.grid(row=20,column=2,padx=10,pady=10)
+boton_registrarse.grid(row=20,column=0,padx=10,pady=10)
 
 boton_salir= Button(ventana_registro,text="Salir",height=1,width=10, command=fn_salir_aplicacion)
-boton_salir.grid(row=20,column=3,padx=10,pady=10)
+boton_salir.grid(row=20,column=2,padx=10,pady=10)
 
 
 

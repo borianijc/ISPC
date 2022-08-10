@@ -1,22 +1,30 @@
-from typing_extensions import Self
+import tkinter
+
+class ventana_Tk:
+    def __init__(self,titulo,icono):
+        self.ventana= tkinter.Tk()
+        self.ventana.config(height=1500,width=1500)
+        self.titulo= self.ventana.title(titulo)
+        self.icono= self.ventana.iconbitmap(icono)
+        self.ventana.mainloop()
+
+    def labels(self,dentro_de,titulo):
+        self.label=tkinter.Label(dentro_de)
+        self.label.config(height=300,width=300)
+        self.label.grid(row=1,column=1)
+        self.titulo= self.label(text=titulo)
+            
+    
+
+ventana_inicio=ventana_Tk
+ventana_inicio("Inicio","library.ico")
+ventana_inicio.label(ventana_inicio,"Prueba")
 
 
-class funciones:
-    def limpiar_campos_inicio(self):
-        self.entry_usuario.set("")
-        self.entry_contraseña.set("")
-     
-    def limpiar_campos_registro(self):
+
+
+
+
+
         
-        self.entry_nombre.set("")
-        self.entry_apellido.set("")
-        self.entry_direccion.set("")
-        self.entry_localidad.set("")
-        self.entry_telefono.set("")
-        self.entry_email.set("")
-        self.entry_nombre_usuario.set("")
-        self.entry_password.set("")
 
-
-        
-limpiar_campos_registro=funciones()
