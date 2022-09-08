@@ -1,28 +1,25 @@
 from tkinter import *
-import imagenes
-from class_fns import Frames_de_Trabajo, Label_de_Trabajo
 
+#from imagenes import *
+#from class_fns import Frames_de_Trabajo, Label_de_Trabajo
 
+icono_panel="library.ico"
+
+imagen_fondo=PhotoImage(file="library_1767.png")
+ 
 #----------Ventana Ingreso Usuarios--------------
 
 ventana_ingreso = Tk()
 ventana_ingreso.title("Ingreso de Usuario")
-ventana_ingreso.iconbitmap(imagenes.icono_panel)
+ventana_ingreso.iconbitmap(icono_panel)
 
 #-------Frame imagen-------------
-frame_imagen=Frames_de_Trabajo(ventana_ingreso)
-
+frame_imagen=Frame(ventana_ingreso)
+frame_imagen.config(height=300,width=300)
+frame_imagen.pack()
 #--------Label imagen-------------
-label_imagen=Label_de_Trabajo(label=frame_imagen)
-label_imagen.imagen_label(imagenes.imagen_fondo)
-
-
-
-
-
-
-
-
+label_imagen=Label(frame_imagen,image=imagen_fondo)
+label_imagen.pack()
 
 
 ventana_ingreso.mainloop()
