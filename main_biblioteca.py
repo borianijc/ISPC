@@ -1,14 +1,16 @@
 from tkinter import *
 from tkinter import messagebox
-        
+from modulo_registrarse import ventana_registro_usuario
+
+
 #----------Ventana Ingreso Usuarios--------------
 def ingreso ():
     ventana_ingreso = Tk()                       
     ventana_ingreso.title("Ingreso de Usuario")    
 
     #----------imagenes-----------
-    icono_panel="Casa\library.ico"                     
-    imagen_fondo=PhotoImage(file="Casa\library_1767.png")
+    icono_panel="library.ico"                     
+    imagen_fondo=PhotoImage(file="library_1767.png")
 
     #-----------icono ventana ingreso------------
     ventana_ingreso.iconbitmap(icono_panel)
@@ -77,3 +79,4 @@ def ingreso ():
     ventana_ingreso.mainloop()
 
 ingreso()
+
